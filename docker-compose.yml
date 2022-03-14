@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  db:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: jeux
+      MYSQL_PASSWORD: password
+      MYSQL_USER: user
+    ports:
+      - '33306:3306'
+    volumes:
+      - ./backend/src/main/resources/static:/docker-entrypoint-initdb.d/

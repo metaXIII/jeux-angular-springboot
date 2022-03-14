@@ -1,0 +1,22 @@
+<h3 class="text-decoration-underline">Jeu en cours :</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nom du jeu</th>
+      <th scope="col">Console</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngIf="game">
+      <th scope="row">{{game.id}}</th>
+      <td>{{game.name}}</td>
+      <td>{{game.console.name}}</td>
+      <td>
+        <button class="btn btn-success mr-1" (click)="finished(game.id)">Indiquer le jeu comme étant terminé</button>
+        <button class="btn btn-danger" (click)="giveup(game.id)">Supprimer le jeu de ma liste</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,15 @@
+<h3>Ajouter un nouveau jeu</h3>
+<form method="post" [formGroup]="gameForm" (ngSubmit)="submit()">
+  <div class="form-group">
+    <label for="name">Nom du jeu</label>
+    <input type="text" class="form-control" id="name" placeholder="Mon nom de jeu" formControlName="name">
+  </div>
+  <div class="form-group">
+    <label for="console">Console</label>
+    <select class="form-control" id="console" formControlName="console">
+      <option value="" selected></option>
+      <option *ngFor="let console of consoleList" value="{{console.id}}">{{ console.name }}</option>
+    </select>
+  </div>
+  <button class="btn btn-primary mt-2 float-end" [disabled]="gameForm.invalid">Valider</button>
+</form>

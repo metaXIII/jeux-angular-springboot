@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" [routerLink]="['index']">Accueil</a>
+  <div class="navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['game']">Ajouter un nouveau jeu</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="console">Ajouter une nouvelle console</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="list">Liste de tous mes jeux</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="play()" href="">Jouer à un nouveau jeu</a>
+      </li>
+    </ul>
+  </div>
+</nav>

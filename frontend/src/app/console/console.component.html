@@ -1,0 +1,8 @@
+<h3>Ajouter une nouvelle console</h3>
+<form method="post" [formGroup]="consoleForm" (ngSubmit)="submit()">
+  <div class="form-group">
+    <label for="name">Nom de la console</label>
+    <input type="text" class="form-control" id="name" placeholder="Mon nom de console" formControlName="name">
+  </div>
+  <button class="btn btn-primary mt-2 float-end" [disabled]="consoleForm.invalid">Valider</button>
+</form>
